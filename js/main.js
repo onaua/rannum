@@ -290,7 +290,7 @@ function onloadddd() {
                 console.log(4)
                 return
             }
-            else if (((y-x)<=shu+5)&&(12<=x<=22)&&(12<=y<=22)){
+            else if (((y-x)<7)&&(12<=x<=22)&&(12<=y<=22)){
                 container.innerText ="403Forriden net::ERR_BLOCKED_BY_CLIENT"
                 console.log(5)
                 return
@@ -353,7 +353,7 @@ function onloadddd() {
                 console.log(4)
                 return
             }
-            else if (((y-x)<=shu+5)&&(12<=x<=22)&&(12<=y<=22)){
+            else if (((y-x)<7)&&(12<=x<=22)&&(12<=y<=22)){
                 container.innerText ="403Forriden net::ERR_BLOCKED_BY_CLIENT"
                 cannotdo=true
                 console.log(5)
