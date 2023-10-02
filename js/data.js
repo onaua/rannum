@@ -42,7 +42,7 @@ function ggdm_duqu(c, d) {
     if (c != "") {
         document.getElementById(c).style.textAlign = "center"
     }
-    document.write(a.daima)
+    //document.write(a.daima)
 }
 
 function xuan_ting(b, f) {
@@ -87,9 +87,9 @@ function xuan_ting(b, f) {
     }, 100)
 }
 
-ggdm_xieru("468x60", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg1.js"><\/script>');
+//ggdm_xieru("468x60", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg1.js"><\/script>');
 ggdm_xieru("468x15", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg2.js"><\/script>');
-ggdm_xieru("728x90", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg3.js"><\/script>');
+//ggdm_xieru("728x90", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg3.js"><\/script>');
 ggdm_xieru("728x90", "|\u5e7f\u544a|\u8c37\u6b4c|\u6027|", '<script src="//e.txhot.cn/js/acmsd/gg4.js"><\/script>');
 ggdm_xieru("728x90", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg5.js"><\/script>');
 ggdm_xieru("990x90", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg6.js"><\/script>');
@@ -100,7 +100,7 @@ ggdm_xieru("250x250", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/
 ggdm_xieru("250x250", "|\u5e7f\u544a|\u8c37\u6b4c|\u6027|", '<script src="//e.txhot.cn/js/acmsd/gg10.js"><\/script>');
 ggdm_xieru("250x250", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg12.js"><\/script>');
 ggdm_xieru("250x250", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg13.js"><\/script>');
-ggdm_xieru("300x250", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg14.js"><\/script>');
+//ggdm_xieru("300x250", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg14.js"><\/script>');
 ggdm_xieru("300x250", "|\u5e7f\u544a|\u8c37\u6b4c|\u6027|", '<script src="//e.txhot.cn/js/acmsd/gg15.js"><\/script>');
 ggdm_xieru("300x250", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg16.js"><\/script>');
 ggdm_xieru("300x250", "|\u5e7f\u544a|\u767e\u5ea6|", '<script src="//e.txhot.cn/js/acmsd/gg17.js"><\/script>');

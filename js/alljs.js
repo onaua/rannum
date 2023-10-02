@@ -44,6 +44,11 @@ function all_zhi_xing_js() {
 
 function jie_mian_qie_huan() {
     document.write('<div id="jie_mian_qie_huan" class="pmk_sj_show pmk_990_show pmk_1040_show">');
+    try{
+        sj_jie_mian
+    }catch(exception){
+        return
+    }
     if (sj_jie_mian == "1") {
         if (typeof (HL.Cookie.Get("all_jie_mian")) == "undefined") {
             document.write('<a href="#" onclick="jie_mian_qie_huan_set(\'pc\');">\u7535\u8111\u7248</a> - <a href="#" onclick="jie_mian_qie_huan_set(\'sj\');">\u624b\u673a\u7248</a> - \u81ea\u9002\u5e94')
