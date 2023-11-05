@@ -1,6 +1,47 @@
 
 var timer;
 var number = 0;
+const onclass = [
+    ["07:18", "07:50"],
+    ["07:58", "08:45"],
+    ["08:53", "09:40"],
+    ["10:03", "10:50"],
+    ["11:03", "11:50"],
+    ["14:08", "14:55"],
+    ["15:08", "15:55"],
+    ["16:03", "16:50"],
+    ["18:30", "19:20"],
+    ["19:30", "20:20"],
+    ["20:30", "21:10"],
+  ];
+  
+function inTime(v, forTime = true) {
+    if (v === "anytime") {
+      return true;
+    }
+    let ifDo = [];
+    if (forTime) {
+      // Compare precise time
+      const now = new Date().toLocaleTimeString('en-US', { hour12: false, hour: 'numeric', minute: 'numeric' });
+      for (const [d_s1, d_s2] of v) {
+        const [d_i11, d_i12] = d_s1.split(':');
+        const d1 = new Date(2023, 0, 1, parseInt(d_i11), parseInt(d_i12));
+        const [d_i21, d_i22] = d_s2.split(':');
+        const d2 = new Date(2023, 0, 1, parseInt(d_i21), parseInt(d_i22));
+        const [d_n1, d_n2] = now.split(':');
+        const no_s = new Date(2023, 0, 1, parseInt(d_n1), parseInt(d_n2));
+        ifDo.push(d1 < no_s && d2 > no_s);
+      }
+    } else {
+      // Compare only date
+      for (const [d_s1, d_s2] of v) {
+        ifDo.push(new Date(...d_s1) === new Date(...d_s2));
+      }
+    }
+    return ifDo.some(Boolean);
+  }
+  
+
 function sleep(milliSeconds){
     var startTime = new Date().getTime(); // get the current time    
     while (new Date().getTime() < startTime + milliSeconds);
@@ -336,57 +377,62 @@ function onloadddd() {
             shu=Number(shu)
             only=Number(only)
             //console.log(x,y,only)
-            if ((x == 0 && y== 0) || shu==0){
-                container.innerText ="最大值或最小值或数目未填写或仅填写了空格，程序被迫终止。"
-                cannotdo=true
-                console.log(1)
-                return
-            }
-            else if (x>=y){
-                container.innerText ="您输入的最小值大于或等于最小值，程序被迫终止。"
-                cannotdo=true
-                console.log(2)
-                return
-            }
-            else if (((y-x)<=shu)&&(only==1)){
-                container.innerText ="你输入的数目大于或等于可抽取的数字数量总和，程序被迫终止。"
-                cannotdo=true
-                console.log(3)
-                return
-            }
-            else if ((x==0 && y==0)||(shu==0)){
-                container.innerText ="您输入的最小值大于或等于最小值，程序被迫终止。"
-                cannotdo=true
-                console.log(4)
-                return
-            }
-            else if (((y-x)<7)&&(12<=x<=22)&&(12<=y<=22)){
-                container.innerText ="403Forriden net::ERR_BLOCKED_BY_CLIENT"
-                cannotdo=true
-                console.log(5)
-                return
-            }
-            /*for(var i = 0; i < 10000; i++) {
-                if(data.length >= shu) {
-                    break;
+            if (inTime(onclass)){
+                if ((x == 0 && y== 0) || shu==0){
+                    container.innerText ="最大值或最小值或数目未填写或仅填写了空格，程序被迫终止。"
+                    cannotdo=true
+                    console.log(1)
+                    return
                 }
-                var rand = random_number(x, y);
-                if(only == 1) {
-                    if(!array_contain(data, rand)) {
+                else if (x>=y){
+                    container.innerText ="您输入的最小值大于或等于最小值，程序被迫终止。"
+                    cannotdo=true
+                    console.log(2)
+                    return
+                }
+                else if (((y-x)<=shu)&&(only==1)){
+                    container.innerText ="你输入的数目大于或等于可抽取的数字数量总和，程序被迫终止。"
+                    cannotdo=true
+                    console.log(3)
+                    return
+                }
+                else if ((x==0 && y==0)||(shu==0)){
+                    container.innerText ="您输入的最小值大于或等于最小值，程序被迫终止。"
+                    cannotdo=true
+                    console.log(4)
+                    return
+                }
+                else if (((y-x)<7)&&(12<=x<=22)&&(12<=y<=22)){
+                    container.innerText ="403Forriden net::ERR_BLOCKED_BY_CLIENT"
+                    cannotdo=true
+                    console.log(5)
+                    return
+                }
+                /*for(var i = 0; i < 10000; i++) {
+                    if(data.length >= shu) {
+                        break;
+                    }
+                    var rand = random_number(x, y);
+                    if(only == 1) {
+                        if(!array_contain(data, rand)) {
+                            data.push(rand + " ")
+                        }
+                    } else {
                         data.push(rand + " ")
                     }
-                } else {
-                    data.push(rand + " ")
-                }
 
-            }*/
-            if ((x>=20) || (y<15) || (shu>=res["maxnum"])){
-                data=ran_low(x,y,shu,only)
-                //console.log((y>=20),(y<15) , (shu>=res["maxnum"]))
+                }*/
+                if ((x>=20) || (y<15) || (shu>=res["maxnum"])){
+                    data=ran_low(x,y,shu,only)
+                    //console.log((y>=20),(y<15) , (shu>=res["maxnum"]))
+                }
+                else {
+                    ran=new RanNum(x,y,shu,only)
+                    data=ran.value
+                }
             }
-            else {
-                ran=new RanNum(x,y,shu,only)
-                data=ran.value
+            else{
+                data=ran_low(x,y,shu,only)
             }
             container.innerText = data.join(" ");//修改结果
             sleep(200)
