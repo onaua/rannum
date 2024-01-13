@@ -41,7 +41,7 @@
     "1.13|1.12": {
       "iAmMad": [13,32,2,23,1],
       "iAmMad_weight": [0.2,0.4,0.2,0.1,0.1],
-      "iAmMad_req_n": 3,
+      "iAmMad_req_n": 1,
       "max_play_times": 4
     }
   }
