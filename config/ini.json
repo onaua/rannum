@@ -46,10 +46,10 @@
       "iAmMad_req_n": 0,
       "max_play_times": 3
     },
-    "6.12|1.10|1.1": {
+    "6.15|1.10|1.1": {
       "iAmMad": [12,32,30,6,16],
       "iAmMad_weight": [0.2,0.4,0.1,0.1,0.2],
-      "iAmMad_req_n": 1,
+      "iAmMad_req_n": 2,
       "max_play_times": 2
     },
     "4.29|4.30": {
