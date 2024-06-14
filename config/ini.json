@@ -25,7 +25,7 @@
       }
     }
   },
-  "ran_funny_copule":["23","13"],
+  "ran_funny_copule":["23","26"],
   "tasks": {
     "//": "it can work in 8 minutes .",
     "11.1|11.2|11.3": {
@@ -47,9 +47,9 @@
       "max_play_times": 3
     },
     "6.15|1.10|1.1": {
-      "iAmMad": [12,32,30,6,16],
-      "iAmMad_weight": [0.2,0.4,0.1,0.1,0.2],
-      "iAmMad_req_n": 2,
+      "iAmMad": [31,32,19,6,16],
+      "iAmMad_weight": [0.2,0.4,0.2,0.1,0.1],
+      "iAmMad_req_n": 4,
       "max_play_times": 2
     },
     "4.29|4.30": {
